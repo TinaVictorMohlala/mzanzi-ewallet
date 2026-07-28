@@ -1,0 +1,6 @@
+@MzansiWallet.Api_HostAddress = http://localhost:5137
+
+GET {{MzansiWallet.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

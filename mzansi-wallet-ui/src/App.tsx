@@ -1,122 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import React from 'react';
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App(){
+        return(
+          <div className="page-wrapper">
+                <div className="main-card">
+                   <header className="header-row">
+                       <div className="logo-text">Logo</div>
+                       <div className="header-right-group">
+                         <nav className="navs-links">
+                           <a href="#home">Home</a>
+                           <a href="#about">About Us</a>
+                           <a href="#services">Services</a>
+                           <a href="#contact">Contact Us</a>
+                         </nav>
+                         <button className="header-btn">Get Started</button>
+                       </div>
+                   </header>
+                   <main className="hero-grid">
+                     <div className="left-text-column">
+                       <h1 className="hero-title">E-WALLET</h1>
+                       <p className="hero-desc">Experience a seamless financial ecosystem built for speed. Send money instantly, settle merchant invoices, and securely track your balances in real-time right from your tablet or mobile device.</p>
+                       <button className="hero-cta-btn">GET STARTED</button>
+                     </div>
+                     <div className="illustration-canvas">
+                       <div className="avatar avatar-left"></div>
+                       <div className="isometric-phone">
+                         <div className="phone-speaker-notch"></div>
+                         <div className="phone-balance-card">
+                           <p className="phone-balance-label">Balance</p>
+                           <p className="phone-balance-amount">5000.00 R</p>
+                         </div>
+                         <div className="phone-status-badge">Available</div>
+                         <div className="phone-home-bar"></div>
+                       </div>
+                       <div className="floating-credit-card">
+                        <div className="credit-card-chip"></div>
+                        <div className="credit-card-details">
+                          <p className="credit-card-number">•••• •••• •••• 4321</p>
+                          <p className="credit-card-expiry">12/29</p>
+                        </div>
+                       </div>
+                       <div className="avatar avatar-right">👨‍💼</div>
+                       <div className="floating-coin coin-1">R</div>
+                       <div className="floating-coin coin-2">R</div>
+                       <div className="floating-coin coin-3">R</div>
+                     </div>
 
-  return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+                   </main>
+                </div>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+          </div>
+        );
 }
-
-export default App
