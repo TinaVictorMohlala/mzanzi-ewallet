@@ -1,8 +1,10 @@
 import React from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
-import registrationPage from './RegistrationPage';
+import RegistrationPage from './RegistrationPage';
 
-export default function App(){
+function LandingPage(){
+        const navigate = useNavigate();
         return(
           <div className="page-wrapper">
                 <div className="main-card">
@@ -15,14 +17,14 @@ export default function App(){
                            <a href="#services">Services</a>
                            <a href="#contact">Contact Us</a>
                          </nav>
-                         <button className="header-btn">Get Started</button>
+                         <button className="header-btn" onClick={() => navigate('/register')}>Get Started</button>
                        </div>
                    </header>
                    <main className="hero-grid">
                      <div className="left-text-column">
                        <h1 className="hero-title">E-WALLET</h1>
                        <p className="hero-desc">Experience a seamless financial ecosystem built for speed. Send money instantly, settle merchant invoices, and securely track your balances in real-time right from your tablet or mobile device.</p>
-                       <button className="hero-cta-btn">GET STARTED</button>
+                       <button className="hero-cta-btn" onClick={() => navigate('/register')}>GET STARTED</button>
                      </div>
                      <div className="illustration-canvas">
                        <div className="avatar avatar-left"></div>
@@ -53,4 +55,12 @@ export default function App(){
 
           </div>
         );
+}
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/register" element={<RegistrationPage />} />
+    </Routes>
+  )  
 }
