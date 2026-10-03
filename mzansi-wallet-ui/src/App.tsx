@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
 import RegistrationPage from './RegistrationPage';
+import LoginPage from './LoginPage';
 
 function LandingPage(){
         const navigate = useNavigate();
@@ -61,6 +62,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/register" element={<RegistrationPage />} />
+      <Route path="/login" element={<LoginPage />} />
     </Routes>
   )  
 }

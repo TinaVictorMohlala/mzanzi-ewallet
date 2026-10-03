@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function RegistrationPage() {
+    const navigate = useNavigate();
     return(
      <main className="page-wrapper">
        <div className="main-card">
@@ -29,7 +31,14 @@ export default function RegistrationPage() {
            <button type="submit" className="hero-cta-btn w-100">Sign Up</button>
            <div className="text-center mt-3">
              <p className="mb-0 small text-muted">
-               Already have an account? <a href="#login" className="text-decoration-none fw-bold text-primary">Log in</a>
+               Already have an account?{' '}
+               <button
+                 type="button"
+                 className="text-link-btn"
+                 onClick={() => navigate('/login')}
+               >
+                Log in
+               </button>
              </p>
 </div>
 
